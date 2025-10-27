@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='images/bgLighter.jpg') }}');">
+    <div class="base">
+        {% include 'navbar.html' %}
+        
+        <main >
+            {% block content %}{% endblock %}
+        </main>
+        
+        {% include 'footer.html' %}
+    </div>
+</body>
+
+</html>
