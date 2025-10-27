@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+  <h1>Контакти</h1>
+  <p>Email: youremail@example.com</p>
+  <p>Телефон: +380 67 339 52 69</p>
+  <p>Сайт: <a href="/">serhiiResume.com</a></p>
+</section>
+
+<section>
+  <h1>Надіслати повідомлення</h1>
+  <form type="post" action="/send_message">
+    <label for="name">Ім'я:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="message">Повідомлення:</label><br>
+    <textarea id="message" name="message" rows="5"></textarea><br><br>
+
+    <button type="submit">Відправити</button>
+  </form>
+</section>
+{% endblock %}
