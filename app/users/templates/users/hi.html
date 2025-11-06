@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{{ name }}, вітаю тебе на моєму сайті!
+
+{% if age is not none and age <= 22 %}
+    Тобі пощастило, {{ age }}
+{% elif age is not none %}
+    Тобі не пощастило, {{ age }}
+{% else %}
+    Вік не вказаний.
+{% endif %}
+
+{% endblock %}
