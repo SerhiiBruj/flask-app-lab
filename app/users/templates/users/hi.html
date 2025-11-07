@@ -3,10 +3,8 @@
 
 {{ name }}, вітаю тебе на моєму сайті!
 
-{% if age is not none and age <= 22 %}
-    Тобі пощастило, {{ age }}
-{% elif age is not none %}
-    Тобі не пощастило, {{ age }}
+{% if age is not none %}
+    Твій вік {{ age }}
 {% else %}
     Вік не вказаний.
 {% endif %}

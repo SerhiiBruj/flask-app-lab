@@ -505,3 +505,12 @@
 2025-11-07 14:02:20,806 - 127.0.0.1 - - [07/Nov/2025 14:02:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
 2025-11-07 14:02:20,828 - 127.0.0.1 - - [07/Nov/2025 14:02:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
 2025-11-07 14:02:20,834 - 127.0.0.1 - - [07/Nov/2025 14:02:20] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
+2025-11-07 14:03:26,122 -  * Detected change in 'C:\\Users\\serhi\\OneDrive\\Desktop\\web python\\flask_app_koval\\app\\views.py', reloading
+2025-11-07 14:03:26,429 -  * Restarting with stat
+2025-11-07 14:06:04,579 -  * Restarting with stat
+2025-11-07 14:06:06,853 -  * Debugger is active!
+2025-11-07 14:06:06,857 -  * Debugger PIN: 133-057-510
+2025-11-07 14:07:09,953 -  * Detected change in 'C:\\Users\\serhi\\OneDrive\\Desktop\\web python\\flask_app_koval\\tests\\test_user_bp.py', reloading
+2025-11-07 14:07:10,180 -  * Restarting with stat
+2025-11-07 14:07:11,694 -  * Debugger is active!
+2025-11-07 14:07:11,698 -  * Debugger PIN: 133-057-510
