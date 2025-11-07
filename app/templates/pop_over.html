@@ -1,0 +1,26 @@
+   {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+        <style>
+          @keyframes fadeOut {
+            0%{
+              transform: translateY(50vh);
+              opacity: 1;
+            }
+            100%{
+              transform: translateY(-10vh);
+              opacity: 0;
+            }
+          }
+          #pop_over_notification{
+            margin: 10px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            animation: fadeOut 5s forwards;
+          }
+        </style>
+          <div id="pop_over_notification" style="position: absolute; right: 0; top: 0; background-color: rgba(0, 0, 0, 0.452); backdrop-filter: blur(4px); border-bottom-left-radius: 30%; height: fit-content; width: fit-content;" class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
