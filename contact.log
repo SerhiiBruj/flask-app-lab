@@ -514,3 +514,54 @@
 2025-11-07 14:07:10,180 -  * Restarting with stat
 2025-11-07 14:07:11,694 -  * Debugger is active!
 2025-11-07 14:07:11,698 -  * Debugger PIN: 133-057-510
+2025-11-07 14:07:46,718 - 127.0.0.1 - - [07/Nov/2025 14:07:46] "GET /contact HTTP/1.1" 200 -
+2025-11-07 14:07:46,798 - 127.0.0.1 - - [07/Nov/2025 14:07:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:07:46,985 - 127.0.0.1 - - [07/Nov/2025 14:07:46] "GET /static/style.css HTTP/1.1" 200 -
+2025-11-07 14:07:46,989 - 127.0.0.1 - - [07/Nov/2025 14:07:46] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
+2025-11-07 14:09:21,795 -  * Detected change in 'C:\\Users\\serhi\\OneDrive\\Desktop\\web python\\flask_app_koval\\app\\forms.py', reloading
+2025-11-07 14:09:21,970 -  * Restarting with stat
+2025-11-07 14:09:23,346 -  * Debugger is active!
+2025-11-07 14:09:23,350 -  * Debugger PIN: 133-057-510
+2025-11-07 14:10:23,385 -  * Detected change in 'C:\\Users\\serhi\\OneDrive\\Desktop\\web python\\flask_app_koval\\app\\forms.py', reloading
+2025-11-07 14:10:23,588 -  * Restarting with stat
+2025-11-07 14:10:24,824 -  * Debugger is active!
+2025-11-07 14:10:24,829 -  * Debugger PIN: 133-057-510
+2025-11-07 14:10:34,006 -  * Detected change in 'C:\\Users\\serhi\\OneDrive\\Desktop\\web python\\flask_app_koval\\app\\forms.py', reloading
+2025-11-07 14:10:34,175 -  * Restarting with stat
+2025-11-07 14:10:35,326 -  * Debugger is active!
+2025-11-07 14:10:35,334 -  * Debugger PIN: 133-057-510
+2025-11-07 14:10:57,987 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8080
+2025-11-07 14:10:57,987 - [33mPress CTRL+C to quit[0m
+2025-11-07 14:10:57,990 -  * Restarting with stat
+2025-11-07 14:10:58,868 -  * Debugger is active!
+2025-11-07 14:10:58,872 -  * Debugger PIN: 133-057-510
+2025-11-07 14:10:59,244 - 127.0.0.1 - - [07/Nov/2025 14:10:59] "GET /contact HTTP/1.1" 200 -
+2025-11-07 14:10:59,292 - 127.0.0.1 - - [07/Nov/2025 14:10:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:10:59,441 - 127.0.0.1 - - [07/Nov/2025 14:10:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-07 14:10:59,446 - 127.0.0.1 - - [07/Nov/2025 14:10:59] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
+2025-11-07 14:11:00,147 - 127.0.0.1 - - [07/Nov/2025 14:11:00] "GET /contact HTTP/1.1" 200 -
+2025-11-07 14:11:00,194 - 127.0.0.1 - - [07/Nov/2025 14:11:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:11:00,233 - 127.0.0.1 - - [07/Nov/2025 14:11:00] "GET /static/style.css HTTP/1.1" 200 -
+2025-11-07 14:11:00,234 - 127.0.0.1 - - [07/Nov/2025 14:11:00] "GET /static/images/bgLighter.jpg HTTP/1.1" 200 -
+2025-11-07 14:11:00,357 - 127.0.0.1 - - [07/Nov/2025 14:11:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-07 14:11:01,004 - 127.0.0.1 - - [07/Nov/2025 14:11:01] "GET /contact HTTP/1.1" 200 -
+2025-11-07 14:11:01,047 - 127.0.0.1 - - [07/Nov/2025 14:11:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:11:01,077 - 127.0.0.1 - - [07/Nov/2025 14:11:01] "GET /static/images/bgLighter.jpg HTTP/1.1" 200 -
+2025-11-07 14:11:01,080 - 127.0.0.1 - - [07/Nov/2025 14:11:01] "GET /static/style.css HTTP/1.1" 200 -
+2025-11-07 14:11:01,154 - 127.0.0.1 - - [07/Nov/2025 14:11:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-07 14:11:03,579 - 127.0.0.1 - - [07/Nov/2025 14:11:03] "GET /contact HTTP/1.1" 200 -
+2025-11-07 14:11:03,709 - 127.0.0.1 - - [07/Nov/2025 14:11:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:11:03,763 - 127.0.0.1 - - [07/Nov/2025 14:11:03] "GET /static/style.css HTTP/1.1" 200 -
+2025-11-07 14:11:03,774 - 127.0.0.1 - - [07/Nov/2025 14:11:03] "GET /static/images/bgLighter.jpg HTTP/1.1" 200 -
+2025-11-07 14:11:03,895 - 127.0.0.1 - - [07/Nov/2025 14:11:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-07 14:11:10,916 - Contact form: Name=Serhii Koval, Email=sergijk174@gmail.com, Message=gfdgfd
+2025-11-07 14:11:10,917 - 127.0.0.1 - - [07/Nov/2025 14:11:10] "[32mPOST /contact HTTP/1.1[0m" 302 -
+2025-11-07 14:11:10,929 - 127.0.0.1 - - [07/Nov/2025 14:11:10] "GET /contact HTTP/1.1" 200 -
+2025-11-07 14:11:11,031 - 127.0.0.1 - - [07/Nov/2025 14:11:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:11:11,043 - 127.0.0.1 - - [07/Nov/2025 14:11:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-07 14:11:11,073 - 127.0.0.1 - - [07/Nov/2025 14:11:11] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
+2025-11-07 14:11:12,878 - 127.0.0.1 - - [07/Nov/2025 14:11:12] "POST /contact HTTP/1.1" 200 -
+2025-11-07 14:11:12,952 - 127.0.0.1 - - [07/Nov/2025 14:11:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:11:13,013 - 127.0.0.1 - - [07/Nov/2025 14:11:13] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
+2025-11-07 14:11:13,020 - 127.0.0.1 - - [07/Nov/2025 14:11:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

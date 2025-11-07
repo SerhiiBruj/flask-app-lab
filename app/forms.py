@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, SubmitField
+from wtforms import StringField, TextAreaField, SubmitField,SelectField
 from wtforms.validators import DataRequired, Email, Length
 
 class ContactForm(FlaskForm):
@@ -14,5 +14,14 @@ class ContactForm(FlaskForm):
     message = TextAreaField(
         'Повідомлення',
         validators=[DataRequired(message="Введіть повідомлення"), Length(min=5)]
+    )
+    subject = SelectField(
+        "Причина звернення",
+        choices=[
+            ('придбання', 'purchase'),
+            ('повідомлення', 'message'),
+            ('колаборація', 'colaboration'),
+        ],
+        validators=[DataRequired()]
     )
     submit = SubmitField('Надіслати')
