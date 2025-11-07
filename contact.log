@@ -473,3 +473,35 @@
 2025-11-07 12:41:15,037 -  * Restarting with stat
 2025-11-07 12:41:15,453 -  * Debugger is active!
 2025-11-07 12:41:15,455 -  * Debugger PIN: 133-057-510
+2025-11-07 14:01:37,451 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8080
+2025-11-07 14:01:37,452 - [33mPress CTRL+C to quit[0m
+2025-11-07 14:01:37,457 -  * Restarting with stat
+2025-11-07 14:01:38,188 -  * Debugger is active!
+2025-11-07 14:01:38,193 -  * Debugger PIN: 133-057-510
+2025-11-07 14:01:48,284 - 127.0.0.1 - - [07/Nov/2025 14:01:48] "GET /users/profile HTTP/1.1" 200 -
+2025-11-07 14:01:48,372 - 127.0.0.1 - - [07/Nov/2025 14:01:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:01:48,525 - 127.0.0.1 - - [07/Nov/2025 14:01:48] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
+2025-11-07 14:01:48,570 - 127.0.0.1 - - [07/Nov/2025 14:01:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-07 14:01:55,092 - 127.0.0.1 - - [07/Nov/2025 14:01:55] "GET /users/profile HTTP/1.1" 200 -
+2025-11-07 14:01:55,153 - 127.0.0.1 - - [07/Nov/2025 14:01:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:01:55,202 - 127.0.0.1 - - [07/Nov/2025 14:01:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-07 14:01:55,218 - 127.0.0.1 - - [07/Nov/2025 14:01:55] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
+2025-11-07 14:01:58,799 - 127.0.0.1 - - [07/Nov/2025 14:01:58] "[32mGET /users/set_theme/light HTTP/1.1[0m" 302 -
+2025-11-07 14:01:58,819 - 127.0.0.1 - - [07/Nov/2025 14:01:58] "GET /users/profile HTTP/1.1" 200 -
+2025-11-07 14:01:58,935 - 127.0.0.1 - - [07/Nov/2025 14:01:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:01:58,948 - 127.0.0.1 - - [07/Nov/2025 14:01:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-07 14:01:58,967 - 127.0.0.1 - - [07/Nov/2025 14:01:58] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
+2025-11-07 14:02:04,068 - 127.0.0.1 - - [07/Nov/2025 14:02:04] "GET /users/profile HTTP/1.1" 200 -
+2025-11-07 14:02:04,126 - 127.0.0.1 - - [07/Nov/2025 14:02:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:02:04,205 - 127.0.0.1 - - [07/Nov/2025 14:02:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-07 14:02:04,222 - 127.0.0.1 - - [07/Nov/2025 14:02:04] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
+2025-11-07 14:02:06,689 - 127.0.0.1 - - [07/Nov/2025 14:02:06] "[32mGET /users/set_theme/dark HTTP/1.1[0m" 302 -
+2025-11-07 14:02:06,718 - 127.0.0.1 - - [07/Nov/2025 14:02:06] "GET /users/profile HTTP/1.1" 200 -
+2025-11-07 14:02:06,835 - 127.0.0.1 - - [07/Nov/2025 14:02:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:02:06,865 - 127.0.0.1 - - [07/Nov/2025 14:02:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-07 14:02:06,877 - 127.0.0.1 - - [07/Nov/2025 14:02:06] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
+2025-11-07 14:02:20,681 - 127.0.0.1 - - [07/Nov/2025 14:02:20] "GET /resume HTTP/1.1" 200 -
+2025-11-07 14:02:20,806 - 127.0.0.1 - - [07/Nov/2025 14:02:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-07 14:02:20,828 - 127.0.0.1 - - [07/Nov/2025 14:02:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-11-07 14:02:20,834 - 127.0.0.1 - - [07/Nov/2025 14:02:20] "[36mGET /static/images/bgLighter.jpg HTTP/1.1[0m" 304 -
