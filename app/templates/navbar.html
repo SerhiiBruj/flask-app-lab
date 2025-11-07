@@ -1,6 +1,23 @@
 <nav class="navbar">
-  <ul>
-    <li><a href="{{ url_for('main.resume') }}">Резюме</a></li>
-    <li><a href="{{ url_for('main.contact') }}">Контакти</a></li>
+  <ul style="display: flex; flex-direction: row; justify-content: space-between;">
+    <div style="position: relative; right: 20px; display: flex; flex-direction: row; justify-content: space-around; ">
+
+      <li><a href="{{ url_for('main.resume') }}">Резюме</a></li>
+      <li><a href="{{ url_for('main.contact') }}">Контакти</a></li>
+    </div>
+
+    <div style="position: relative; right: 20px; display: flex; flex-direction: row; justify-content: space-around">
+
+      {% if session.get('user') %}
+      <div>
+        <a href="{{ url_for('users.set_theme', theme='light') }}" class="button light">Світла тема</a>
+        <a href="{{ url_for('users.set_theme', theme='dark') }}" class="button dark">Темна тема</a>
+      </div>
+      <li><a href="{{ url_for('users.profile') }}"> {{ session.get('user') }}</a></li>
+      <li><a href="{{ url_for('users.logout') }}">Вийти</a></li>
+      {% else %}
+      <li><a href="{{ url_for('users.login') }}">Увійти</a></li>
+      {% endif %}
+    </div>
   </ul>
 </nav>

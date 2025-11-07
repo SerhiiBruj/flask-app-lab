@@ -9,13 +9,57 @@
 </head>
 
 <body style="background-image: url('{{ url_for('static', filename='images/bgLighter.jpg') }}');">
+    {% if session.get('theme')=='light' %}
+   <style>
+        body {
+            color: #0a0e15;
+        }
+
+        .base {
+            background: #9393933f;
+        }
+
+        main {
+            background: #d4d4d494;
+        }
+
+        h1 {
+            color: #0a0e15;
+        }
+
+
+
+        a {
+            color: #0a0e15;
+        }
+
+        a::after {
+            background: #0a0e15;
+        }
+
+
+        .navbar {
+            background: #acacac;
+            padding: 12px 20px;
+        }
+
+        .navbar ul li a {
+            color: #0a0e15;
+        }
+
+        footer {
+            background: #acacac;
+        }
+        </style>
+        
+                    {% endif %}
     <div class="base">
         {% include 'navbar.html' %}
-        
-        <main >
+
+        <main>
             {% block content %}{% endblock %}
         </main>
-        
+        {% include 'pop_over.html' %}
         {% include 'footer.html' %}
     </div>
 </body>

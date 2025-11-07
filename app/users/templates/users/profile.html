@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+ <h2>Профіль користувача: {{ user }}</h2>
+  <a href="{{ url_for('users.logout') }}">Вийти</a>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, msg in messages %}
+        <div class="flash"><strong>{{ msg }}</strong></div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <hr>
+
+  <h3>Додати cookie</h3>
+  <form method="POST">
+    <input type="text" name="key" placeholder="Ключ" required>
+    <input type="text" name="value" placeholder="Значення" required>
+    <input type="number" name="max_age" placeholder="Термін дії (секунди)">
+    <button type="submit" name="add_cookie">Додати</button>
+  </form>
+
+  <h3>Видалити cookie</h3>
+  <form method="POST">
+    <input type="text" name="delete_key" placeholder="Ключ для видалення">
+    <button type="submit" name="delete_cookie">Видалити за ключем</button>
+    <button type="submit" name="delete_all">Видалити всі</button>
+  </form>
+
+  <h3>Поточні cookie</h3>
+  <table style="overflow-x: hidden;">
+    <tr><th>Ключ</th><th>Значення</th></tr>
+    {% for k, v in cookies.items() %}
+      <tr><td>{{ k }}</td><td style="max-width: 100%;" >{{ v }}</td></tr>
+    {% else %}
+      <tr><td colspan="2">Немає збережених cookie</td></tr>
+    {% endfor %}
+  </table>
+{% endblock %}

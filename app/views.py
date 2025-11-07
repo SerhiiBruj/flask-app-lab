@@ -1,7 +1,10 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, make_response,redirect, url_for,session, flash
 
 main = Blueprint('main', __name__, template_folder='templates')
-
+USER_DATA = {
+    "admin": "12345",
+    "serhii": "qwerty"
+}
 @main.route('/')
 def index():
     return render_template('resume.html', title="Резюме Сергія")
@@ -16,5 +19,7 @@ def contact():
 
 @main.route('/admin')
 def admin():
-    # Редірект на /users/hi/Administrator?age=45
     return redirect(url_for('users.greetings', name='Administrator', age=45))
+
+
+
