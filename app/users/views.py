@@ -1,6 +1,12 @@
 from flask import render_template, request, make_response,redirect, url_for,session, flash
 from . import users 
+from .forms import LoginForm
 
+
+USER_DATA = {
+    "admin": "12345",
+    "serhii": "qwerty"
+}
 @users.route('/hi/<string:name>')
 def greetings(name):
     age = request.args.get("age", None, type=int)
@@ -8,20 +14,22 @@ def greetings(name):
 
 @users.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
+    form = LoginForm()
 
-        if username in USER_DATA and USER_DATA[username] == password:
+    if form.validate_on_submit():
+        username = form.username.data
+        password = form.password.data
+        remember = form.remember.data
+
+        if username in USER_DATA and password == USER_DATA[username]:
             session['user'] = username
-            flash(f"Вітаємо, {username}!", "success")
+            flash(f"Успішний вхід як {username}. Remember: {remember}", "success")
             return redirect(url_for('users.profile'))
         else:
-            flash("Неправильне ім’я користувача або пароль!", "error")
-            return redirect(url_for('users.login'))
+            flash("Невірні дані для входу!", "danger")
+            return redirect(url_for('users.login'))  
 
-    return render_template('users/login.html', title="Вхід")
-
+    return render_template('users/login.html', form=form)
 
 @users.route('/logout')
 def logout():

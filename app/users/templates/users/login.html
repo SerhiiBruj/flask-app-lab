@@ -1,11 +1,22 @@
 {% extends "base.html" %}
+{% from "macros.html" import render_field %}
 {% block content %}
-  <h2>Вхід</h2>
-  <form method="POST">
-      <label>Ім’я користувача:</label><br>
-      <input type="text" name="username" required><br><br>
-      <label>Пароль:</label><br>
-      <input type="password" name="password" required><br><br>
-      <button type="submit">Увійти</button>
-  </form>
+<h2 class="mb-4">Вхід</h2>
+
+{# Flash-повідомлення #}
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, msg in messages %}
+<div class="alert " style="color: rgb(238, 98, 98);">{{ msg }}</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<form method="POST" novalidate>
+  {{ form.hidden_tag() }}
+  {{ render_field(form.username) }}
+  {{ render_field(form.password) }}
+  {{ render_field(form.remember) }}
+  {{ render_field(form.submit) }}
+</form>
 {% endblock %}

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% from "macros.html" import render_field %}
 
 {% block content %}
 <section>
@@ -9,8 +10,27 @@
 </section>
 
 <section>
+
+
   <h1>Надіслати повідомлення</h1>
-  <form method="get" action="/hi">
+
+<div class="container mt-5">
+    <h1>Контактна форма</h1>
+
+    <form method="POST" novalidate>
+        {{ form.hidden_tag() }} 
+        
+        {{ render_field(form.name) }}
+        {{ render_field(form.email) }}
+        {{ render_field(form.message) }}
+        
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+
+   
+</div>
+
+  <!-- <form method="get" action="/hi">
     <label for="name">Ім'я:</label><br>
     <input type="text" id="name" name="name" required><br><br>
 
@@ -24,19 +44,23 @@
     <textarea id="message" name="message" rows="5"></textarea><br><br>
 
     <button id="event" type="submit">Відправити</button>
-  </form>
+  </form> -->
   <script>
-    let btn = document.getElementById("event");
-    let form = document.getElementById("myForm");
+    // let btn = document.getElementById("event");
+    // let form = document.getElementById("myForm");
 
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
+    // btn.addEventListener("click", function (e) {
+    //   e.preventDefault();
 
-      let name = document.getElementById("name").value;
-      let age = document.getElementById("age").value;
+    //   let name = document.getElementById("name").value;
+    //   let age = document.getElementById("age").value;
 
-      window.location.href = `/users/hi/${encodeURIComponent(name)}?age=${encodeURIComponent(age)}`;
-    });
+    //   window.location.href = `/users/hi/${encodeURIComponent(name)}?age=${encodeURIComponent(age)}`;
+    // });
   </script>
 </section>
 {% endblock %}
+
+
+
+
