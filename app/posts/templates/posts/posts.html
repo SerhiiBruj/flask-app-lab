@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if posts|length == 0 %}
+        <h4 class="no-posts">Немає постів для відображення.</h4>
+    {% else %}
+        {% for post in posts %}
+        <div >
+            <h2 class="post-title" style="background-image: url('{{ url_for('static', filename='images/bgLighter.jpg') }}');">{{ post.title }}</h2>
+           <p class="post-body">{{ post.body[:100] }}</p>
+            <div class="post-meta">
+                <small>Опубліковано: {{ post.created_at.strftime('%Y-%m-%d %H:%M') }}</small>
+                <small>Автор: {{ post.author }}</small>
+            </div>
+            <div class="post-actions">
+                <form action="{{ url_for('posts.delete_confirm', id=post.id) }}" method="POST">
+                    <button type="submit" class="btn btn-delete">Видалити</button>
+                </form>
+                <form action="{{ url_for('posts.edit_post', id=post.id) }}" method="POST">
+                    <button type="submit" class="btn btn-edit">Редагувати</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
