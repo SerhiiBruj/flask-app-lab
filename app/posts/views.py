@@ -1,9 +1,9 @@
 from flask import render_template, current_app, request,redirect, url_for
 from . import posts_bp
-from .models import Post
 from app import db
 from .forms import PostForm
 from  flask import flash 
+from .models import Post, Tag
 
 
 @posts_bp.route('/post')
@@ -16,13 +16,18 @@ def index():
 @posts_bp.route('/post/create', methods=['GET', 'POST'])
 def create():
     form = PostForm()
+    form.tags.choices = [(t.id, t.name) for t in Tag.query.all()]
+    
     if form.validate_on_submit():
+
         post = Post(
             title=form.title.data,
             body=form.body.data,
             category=form.category.data,
-            author=form.author.data
+            user_id=form.author.data
         )
+        selected_tags = Tag.query.filter(Tag.id.in_(form.tags.data)).all()
+        post.tags.extend(selected_tags)
         db.session.add(post)
         db.session.commit()
         flash("Post added successfully", "success")
@@ -60,3 +65,4 @@ def delete_post(id):
         flash("Post deleted", "danger")
         return redirect(url_for('posts.index'))
     return render_template('confirm_delete.html', post=post)
+
