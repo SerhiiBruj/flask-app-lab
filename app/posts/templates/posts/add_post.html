@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+
+{% block content %}
+<main class="main-content">
+    <div class="post-card">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ macros.render_field(form.title) }}
+            {{ macros.render_field(form.body) }}
+            {{ macros.render_field(form.author) }}
+            {{ macros.render_field(form.category) }}
+            <p>{{ form.tags.label }} {{ form.tags(size=5, multiple=True) }}</p>
+            {{ macros.render_field(form.publish_date) }}
+            <div class="form-group">
+                {{ form.submit(class="btn btn-edit") }}
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock %}

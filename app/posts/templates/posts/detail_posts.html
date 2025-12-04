@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h2 class="post-title">{{ post.title }}</h2>
+    <p class="post-body">{{ post.body }}</p>
+    <div class="post-meta">
+        <small>Створено: {{ post.created_at.strftime('%Y-%m-%d %H:%M') }}</small>
+    </div>
+</div>
+{% endblock %}
